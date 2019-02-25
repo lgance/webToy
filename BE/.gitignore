@@ -1,0 +1,9 @@
+## Ignore File ##
+
+*.log
+*.bak
+
+##  npm Modules
+	node_modules/
+## test code with test report
+test.js
