@@ -1,0 +1,50 @@
+// template
+// https://www.shutterstock.com/ko/blog/101-free-color-combinations-design-inspiration/
+// 1
+// 4
+// 84
+$beesWax:#FEF0BF;
+$casaBlanca:#F3B749;
+$stormDust:#655C57;
+$mikaDo:#2E1E11;
+
+// 89
+// 99
+ 
+
+
+
+
+$basicColor:#03a87c;
+
+.button{
+    display: inline-block;
+    line-height:31px;
+    height:33px;
+    min-width:100px;
+    font-size:16px;
+    padding : 0 14px;
+
+    border:1px solid rgba(0,0,0,15);
+    border-color:$casaBlanca;
+    color:$casaBlanca;
+
+    text-align:center;
+    border-radius:4px;
+
+    cursor:pointer;
+
+    // text-overflow:ellipsis;
+    overflow:hidden;
+    // ellipsis를 위해서 줄바꿈 을 제거
+    white-space:nowrap;
+    
+ 
+// active가 hover보다 뒤에 와야 동작합니다.
+    &:hover{
+        color:#FFFFFF;
+        background-color:$casaBlanca;
+        
+    }
+  
+}

@@ -27,7 +27,6 @@ app.use(logger('dev'));
 // 정적 파일 기록시 morgan 보다 위에 올려야함
 // public에 원하는 파일이 없을 때 next
 app.use(express.static(path.join(__dirname,'public')));
-
 app.use(cookieParser('secret code'));
 
 app.use(session({
@@ -41,7 +40,7 @@ app.use(session({
     }
 }))
 
-// is post Type data parsing in req.body;
+// is post Type data parsing in req.body; // 이거 쳋크해봐야댐
 app.use(bodyParser.urlencoded({extended:true}));
 
 // ajax post data : { message :data2 } parsing
