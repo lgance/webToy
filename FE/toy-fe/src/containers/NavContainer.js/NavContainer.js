@@ -7,11 +7,14 @@ const cx = classNames.bind(style);
 
 class NavContainer extends Component {
     render() {
-    const itemArray = new Array(15).fill(null).map((a,i)=><NavItem key={i}>{i+"번째"}</NavItem>)
-        
-        return (
+        const {navItems,handleNavClick} = this.props;
+        const itemArray = navItems.map((item,index)=>{
+            return <NavItem navHandle={(e)=>handleNavClick(item.id,e)}key={index} activate={item.activate}>{item.text}</NavItem>
+        });
+
+        return (    
             <nav className={cx('Nav__wrap')}>
-                <ul className={cx('Nav__unordered')}>
+                <ul className={cx('Nav__unordered')} >
                     {itemArray}
                 </ul>
             </nav>

@@ -1,0 +1,24 @@
+.Nav__item{
+    color:gray;
+    display:inline-block;
+    margin-left:24px;
+    padding:0;
+    border:0;
+
+    line-height:20px;
+    min-width:40px;
+    cursor:pointer;
+    &:hover{
+        color:#000000;
+    }
+    &:first-child{
+        margin:0;
+    }
+    &.activate{
+        color:#F3B749;
+    }
+
+    .active{
+        color:#000000;
+    }
+}
