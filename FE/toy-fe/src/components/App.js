@@ -2,6 +2,9 @@ import React, { Component,Fragment } from 'react';
 
 import BlogHeader from './template/BlogHeader';
 import BlogNav from './template/BlogNav';
+
+
+import HooksTest from './Hooks/useStateHooks';
 import '../styles/common.scss';
 
 class App extends Component {
@@ -14,6 +17,7 @@ class App extends Component {
       {id:"js",text: "JavaScript",disabled:false,activate:false},
       {id:"test",text:"test",disabled:false,activate:false},
       {id:"navDaily",text:"Daily",disabled:false,activate:false},
+      {id:"issueBoard",text:"Issue",disabled:false,activate:false},
     ]
   }
 
@@ -64,6 +68,7 @@ class App extends Component {
         <div className="Main_wrapper">
            <BlogHeader version={versionText}></BlogHeader>
            <BlogNav items={navMenu} navHandle = {handleNavClick}></BlogNav>
+           <HooksTest></HooksTest>
         </div>
       </Fragment>
     );
