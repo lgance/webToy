@@ -1,6 +1,8 @@
 @import '../../../styles/utils.scss';
 
 $headerHeight:65px;
+
+.Main_wrapper{
 header{
     display:flex;
     flex-flow:nowrap row;
@@ -58,4 +60,6 @@ header{
         }
     }
     
+}
+
 }

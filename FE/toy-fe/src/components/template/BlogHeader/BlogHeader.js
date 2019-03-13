@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component ,Fragment} from 'react';
 import classNames from 'classnames/bind';
 import styles from './BlogHeader.scss';
 
-import Button from '../../Button';
+import BlogNav from 'components/template/BlogNav';
+import Button from 'components/Button';
 
 const cx = classNames.bind(styles);
 class BlogHeader extends Component {
     render() {
-        const {version} = this.props;
-    
+        const {version,navMenu,navHandle} = this.props;
 
         return (
+            <Fragment>
             <header>
                 <div className={cx('Header__logo')}>
                     <svg height="22" width="112" viewBox="0 0 111.5 22">
@@ -32,6 +33,8 @@ class BlogHeader extends Component {
                       
                 </div>
             </header>
+                   <BlogNav items={navMenu} handleNavClick = {navHandle}></BlogNav>
+            </Fragment>
         );
     }
 }

@@ -1,11 +1,9 @@
 import React, { Component,Fragment } from 'react';
-
-import BlogHeader from './template/BlogHeader';
-import BlogNav from './template/BlogNav';
-
-
-import HooksTest from './Hooks/useStateHooks';
-import '../styles/common.scss';
+import { Route , Switch} from 'react-router-dom';
+import BlogHeader from 'components/template/BlogHeader';
+import { Board } from 'pages';
+import 'styles/common.scss';
+import 'styles/reset.scss';
 
 class App extends Component {
 
@@ -62,14 +60,20 @@ class App extends Component {
     const { navMenu, versionText} = this.state;
     const { handleNavClick }
     = this;
-    
+  
+  console.warn('test');
     return (
       <Fragment>
         <div className="Main_wrapper">
-           <BlogHeader version={versionText}></BlogHeader>
-           <BlogNav items={navMenu} navHandle = {handleNavClick}></BlogNav>
-           <HooksTest></HooksTest>
+            <BlogHeader version={versionText} 
+            navMenu={navMenu} 
+            navHandle = {handleNavClick}></BlogHeader>
+              <Switch>
+                <Route path="/board/:category" component={Board} /> 
+                <Route path="/board" component={Board} />  
+              </Switch>
         </div>
+
       </Fragment>
     );
   }
