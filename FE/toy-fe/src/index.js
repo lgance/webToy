@@ -6,6 +6,9 @@ import './index.css';
 import Root from './client/Root';
 import * as serviceWorker from './serviceWorker';
 
+import 'styles/reset.scss';
+import 'styles/common.scss';
+
 ReactDOM.render(<Root />, document.getElementById('app-root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -16,9 +16,6 @@ function useStateHooks(){
     
     useEffect(()=>{
         console.log('use Effect');
-        console.log(this);
-        console.log(name);
-        console.log(description);
     });
     return (
       <form onSubmit={onSubmit}>

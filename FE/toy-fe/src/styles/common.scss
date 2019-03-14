@@ -1,20 +1,11 @@
-
-
-*{
-    box-sizing:border-box;
-}
-
-
 body{
     background-color:#F6F6F6;
+    box-sizing:border-box;
 }
+*{
+    box-sizing:inherit;
+}
+
 #app-root{
     height:100%;
-}
-.Main_wrapper{
-    max-width:calc(1050px);
-    height:100%;
-    margin:0 auto;
-    padding:10px;
-    background-color:#FFFFFF;
 }

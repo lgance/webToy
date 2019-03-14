@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PageTemplate from 'components/common/PageTemplate';
 
 /**
  *  history -> push, replace 경로 이동 또는 앞뒤 페이지 변경 
@@ -7,15 +7,15 @@ import React from 'react';
  *  match -> 어떤 라우트에 매칭이 되었지에 대한 정보 params에는 /about/:name 을 가짐
  */
 
-const Home = ()=>{
-    
+const HomePage = ()=>{
     return(
-        <div>홈</div>
-
+        <PageTemplate>
+                HomePages s 
+        </PageTemplate>
      )
 }
 
-export default Home;
+export default HomePage;
 
 
 
