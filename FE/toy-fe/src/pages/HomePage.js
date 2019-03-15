@@ -10,7 +10,7 @@ import PageTemplate from 'components/common/PageTemplate';
 const HomePage = ()=>{
     return(
         <PageTemplate>
-                HomePages s 
+                <label>HomePages s 넘기는 문자열을 만듭니다. ggggggggggggggggggggggggggggggggggggggggggggggg   gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</label>
         </PageTemplate>
      )
 }

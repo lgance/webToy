@@ -49,7 +49,7 @@ $headerHeight:65px;
             // background-color:$violet;
             display:flex;
             flex-flow:nowrap row;
-            justify-content:flex-end;
+            
             // stretch (default) align-items 의 default는 stretch 이므로 지정시 꽉차게 나옴
         
             align-items:center;
@@ -63,7 +63,7 @@ $headerHeight:65px;
                 display:flex;
                 align-items:center;
                 height:100px;
-                margin-right:15px;
+                // margin-right:15px;
                 .Search__icon{
                     fill:rgba(0,0,0,.54);
                     line-height:25px;
@@ -71,6 +71,10 @@ $headerHeight:65px;
                  
                 }
             }
+            .button{
+                margin-left:auto;
+            }
+
             
         }
     }

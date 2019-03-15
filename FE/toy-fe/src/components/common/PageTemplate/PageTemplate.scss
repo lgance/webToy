@@ -6,7 +6,17 @@
     padding:10px;
     background-color:#FFFFFF;
 
+    main{
+        display:inline-block;
+        line-height:20px;
+    }
 
-
+    main label{
+        // display:inline-block;
+        // vertical-align:2px
+        line-height:inherit;
+        word-break:break-all;
+        white-space:wrap;
+    }
 
 }
