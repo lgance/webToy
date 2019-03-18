@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './NavItem.scss';
 import className from 'classnames/bind';
@@ -11,12 +11,15 @@ const NavItem = ({
     moveto,
     navHandle
 }) => {
+    console.log(moveto );
     return(
-        <li className={cx('Nav__item',{activate})} 
-        onClick={navHandle}>
-            <Link to ={"/board/"+moveto}>
+        <li className={cx('Nav__item')}    >
+            <NavLink exact to ={"/board/"+moveto}
+            
+            activeClassName="Nav__item activate"
+            >
                 {children}
-            </Link>
+            </NavLink>
         </li>
     )
 }

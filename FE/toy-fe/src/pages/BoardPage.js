@@ -1,4 +1,5 @@
 import React from 'react';
+import PageTemplate from 'components/common/PageTemplate';
 import queryString from 'query-string';
 
 const BoardPage = ({location,match}) =>{
@@ -10,6 +11,7 @@ const BoardPage = ({location,match}) =>{
 
 
         return(
+            <PageTemplate>
             <div>
                 <label>
                 카테고리는 {match.params.category}
@@ -21,6 +23,7 @@ const BoardPage = ({location,match}) =>{
                     </label>
                 } 
             </div>
+            </PageTemplate>
         )
 }
 

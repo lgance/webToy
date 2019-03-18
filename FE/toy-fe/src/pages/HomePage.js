@@ -7,9 +7,10 @@ import PageTemplate from 'components/common/PageTemplate';
  *  match -> 어떤 라우트에 매칭이 되었지에 대한 정보 params에는 /about/:name 을 가짐
  */
 
+
 const HomePage = ()=>{
     return(
-        <PageTemplate>
+        <PageTemplate >
                 <label>HomePages s 넘기는 문자열을 만듭니다. ggggggggggggggggggggggggggggggggggggggggggggggg   gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</label>
         </PageTemplate>
      )
