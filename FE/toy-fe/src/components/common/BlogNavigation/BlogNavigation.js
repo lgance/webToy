@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import classNames from 'classnames/bind';
 import style from './BlogNavigation.scss';
@@ -8,19 +8,30 @@ import NavContainer from 'containers/NavContainer.js'
 
 const cx = classNames.bind(style);
 
-class BlogNavigation extends Component {
-    render() {
-    const {items,handleNavClick} = this.props;
+const BlogNavigation = (
+    {gnb}
+    ) =>(
+        <nav>
+        <div className={cx('Global__menu')}>
+             <NavContainer gnb = {gnb}></NavContainer>
+        </div>
         
-        return (
-           <nav>
-               <div className={cx('Global__menu')}>
-                    <NavContainer navItems={items} handleNavClick={handleNavClick} ></NavContainer>
-               </div>
-               
-           </nav>
-        );
-    }
-}
+    </nav>
+)
+
 
 export default BlogNavigation; 
+
+
+// class BlogNavigation extends Component {
+//     render() {
+//         return (
+//            <nav>
+//                <div className={cx('Global__menu')}>
+//                     <NavContainer gnb = {items}></NavContainer>
+//                </div>
+               
+//            </nav>
+//         );
+//     }
+// }
