@@ -31,7 +31,7 @@ class NavItem extends Component {
             console.warn('활성화로 인한 재렌더링',nextProps.moveto);
             return true;
         }
-        console.warn('재 렌더링 안합니다.',nextProps.moveto);
+        // console.warn('재 렌더링 안합니다.',nextProps.moveto);
         return false;
     }
 
