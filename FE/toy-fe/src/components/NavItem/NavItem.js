@@ -4,11 +4,17 @@ import { NavLink } from 'react-router-dom';
 import styles from './NavItem.scss';
 import className from 'classnames/bind';
 
+import PropTypes from 'prop-types';
 const cx = className.bind(styles);
 
 // 재렌더링 할필요 없는건 재렌더링 하지않음
 class NavItem extends Component {
 
+
+    static propTypes ={
+        children:PropTypes.string.isRequired,
+        moveto:PropTypes.string.isRequired        
+    }
 
     state = {
         activate:false
@@ -28,6 +34,8 @@ class NavItem extends Component {
     shouldComponentUpdate(nextProps,nextState){
        
        if(nextState.activate === true){
+            console.warn(nextProps);
+            console.warn(nextState);
             console.warn('활성화로 인한 재렌더링',nextProps.moveto);
             return true;
         }

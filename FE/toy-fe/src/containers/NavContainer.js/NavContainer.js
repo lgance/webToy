@@ -76,7 +76,7 @@ class NavContainer extends Component {
         // console.log(gnb);
 
         return (    
-            <nav className={cx('Nav__wrap')}>
+            <nav className={cx('Nav__wrap')} role="navigation">
                 <ul className={cx('Nav__unordered')} >
                     {itemArray}
                 </ul>

@@ -11,12 +11,11 @@ const cx = classNames.bind(style);
 const BlogNavigation = (
     {gnb}
     ) =>(
-        <nav>
+        
         <div className={cx('Global__menu')}>
              <NavContainer gnb = {gnb}></NavContainer>
         </div>
         
-    </nav>
 )
 
 

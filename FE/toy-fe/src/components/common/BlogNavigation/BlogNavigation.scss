@@ -1,12 +1,10 @@
-
+@import '../PageTemplate/PageTemplate.scss';
 
 nav{
     display:block;
-    min-height:40px;
-    height:40px;
-
+    min-height:$navMinHeight;
+    height:$navHeight;
     // overflow:hidden;
-    
 }
 
 

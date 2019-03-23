@@ -19,12 +19,17 @@ const BlogHeader = ({version})=> (
     </div>
     <div className="Header_right">
         <div className="Header_rightset">
-            <svg className="Search__icon" width="25"height="25">
-                <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
-                </path>
-            </svg>
+            <input type="input" placeholder="Search in Category"></input>
+            <div className="icon">
+                <svg className="Search__icon" width="25"height="25">
+                    <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
+                    </path>
+                </svg>    
+            </div>
+            
+            <Button>Sign in</Button>
         </div>
-           <Button>Sign in</Button>
+          
           
     </div>
 </header>

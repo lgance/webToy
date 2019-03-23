@@ -1,7 +1,11 @@
+@import '../../components/common/PageTemplate/PageTemplate.scss';
 
+nav.Nav__wrap{
+    display:block;
+    min-height:$navMinHeight;
+    height:$navHeight;
+    // overflow:hidden;
 
-.Nav__wrap{
-   
     .Nav__unordered{
         list-style:none;
         margin:0;
@@ -9,6 +13,8 @@
         height:100%;
 
         white-space:nowrap;
+
+        
      
     }
 }

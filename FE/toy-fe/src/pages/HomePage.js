@@ -1,5 +1,6 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
+import BlogHome from 'components/common/BlogHome';
 
 /**
  *  history -> push, replace 경로 이동 또는 앞뒤 페이지 변경 
@@ -10,8 +11,8 @@ import PageTemplate from 'components/common/PageTemplate';
 
 const HomePage = ()=>{
     return(
-        <PageTemplate >
-                <label>HomePages s 넘기는 문자열을 만듭니다. ggggggggggggggggggggggggggggggggggggggggggggggg   gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</label>
+        <PageTemplate>
+                <BlogHome></BlogHome>
         </PageTemplate>
      )
 }

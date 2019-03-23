@@ -1,13 +1,19 @@
+@import '../PageTemplate/PageTemplate.scss';
+
+
 
 .Footer{
 
     width:100%;
-    height:10rem;
-    background-color:bisque;
+    height:$footerHeight;
+    background-color:#2E1E11;
 
+    color:#FFFFFF;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
 
 }
+
+
