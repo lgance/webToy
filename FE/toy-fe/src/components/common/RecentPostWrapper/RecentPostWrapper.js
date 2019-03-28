@@ -17,7 +17,8 @@ const RecentPostWrapper = () =>{
     return (
        <div style={{
            "width":"100%",
-           "height":"auto"
+           "height":"auto",
+           "borderBottom":"1px solid #D5D5D5"
         }
            }>
             <h1>최신 포스팅</h1>

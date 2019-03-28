@@ -7,6 +7,7 @@ $indigo: #5c7cfa;
 $violet: #7950f2;
 
 
+
 // mixin 만들기 
 @mixin square($size) {
     $calculated: 32px * $size;

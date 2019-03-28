@@ -1,0 +1,28 @@
+@import 'styles/utils.scss';
+
+
+.Editor__template {
+    .panes{
+        height:calc(100vh - 4rem); // 페이지높이에서 editorheader만큼빼기
+        display:flex;
+        background:#f1f3f5;
+
+        position:relative;
+        .pane{
+            display:flex;
+            flex:1;
+
+            min-width:0;
+            overflow:auto;
+        }
+        .separator {
+          width:1rem;
+          height:100%;
+          position:absolute;
+          transform:translate(-50%);
+          cursor:col-resize;
+          background:black;
+        }
+
+    }
+}

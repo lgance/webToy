@@ -16,6 +16,7 @@ const gnb = [
   {id:"selenium",text:"Selenium"},
   {id:"issue",text:"Issue"},
   {id:"profile",text:"Profile"},
+  {id:"editor",text:"Editor"},
   ]
 
 
