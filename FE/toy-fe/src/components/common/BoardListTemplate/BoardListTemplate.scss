@@ -1,0 +1,46 @@
+.BoardListTemplate{
+    padding:0px calc(0.5rem) calc(0.5rem);
+    .Notice__List{
+        display:block;
+        background-color:chartreuse;
+    }
+
+    .Category__List{
+        background-color:aquamarine;
+    }
+
+
+    .Pagination__wrapper{
+        text-align:center;
+        margin:0 -0.5rem;
+      
+    button{
+            cursor:pointer;
+            min-width:calc(1rem);
+            height:calc(2rem);
+            width:35px;
+            line-height:28px;
+            border-color:lightgrey;
+            padding:0px;
+    
+            border-style:solid;
+            border-image:initial;
+            border-radius:calc(1rem);
+            background-color:#FFFFFF;
+            outline:none;
+            vertical-align:top;
+            
+    }
+    .current{
+        cursor:default;
+        background-color:#2E1E11;
+        color:#FFFFFF;
+    }
+   
+    button[disabled]{
+            cursor:not-allowed;
+            color:silver;
+
+    }
+}
+}

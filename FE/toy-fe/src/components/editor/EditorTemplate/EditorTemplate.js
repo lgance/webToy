@@ -45,12 +45,6 @@ class EditorTemplate extends Component {
         left: `${leftPercentage*100}%`
     };
 
-
-
-
-
-
-
     return (
       <div className={cx('Editor__template')}>
           {header} 

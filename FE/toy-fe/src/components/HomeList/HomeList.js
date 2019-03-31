@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './BoardList.scss';
+import styles from './HomeList.scss';
 import classNames from 'classnames/bind';
 
 // import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-const BoardItem = () =>{
+const HomeListItem = () =>{
     return(
         <div className={cx('Board__item')}>
                 <h2><a>타이틀</a></h2>
@@ -22,13 +22,13 @@ const BoardItem = () =>{
     )
 }
 
-const BoardList = () => (
+const HomeList = () => (
     <div classname={cx('Board__list')}>
-            <BoardItem/>
-            <BoardItem/>
-            <BoardItem/>
-            <BoardItem/>
+            <HomeListItem/>
+            <HomeListItem/>
+            <HomeListItem/>
+            <HomeListItem/>
     </div>
 )
 
-export default BoardList;
+export default HomeList;
