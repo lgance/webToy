@@ -38,25 +38,22 @@ const BoardListTemplate = ({
 }) =>{
     return (
         <section className={cx('BoardListTemplate')}>
-                <div>
+                <div className={cx('Pagination__area')}>
                      <PaginationComponent></PaginationComponent>
                 </div>
                 <div className={cx('Notice__List')}>
-                    NoticeList
+                    {noticeList}
                 </div>
                 <div className={cx('Category__List')}>
-                    CategoryList
+                    {category}
 
                 </div>
-                <div>
+                <div className={cx('Pagination__area')}>
                     <PaginationComponent></PaginationComponent>
                 </div>
         </section>
     )
-
-
 }
-
 export default BoardListTemplate; 
 
 //    {/* <div>
