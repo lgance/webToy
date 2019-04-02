@@ -12,10 +12,10 @@ const BlogHeader = ({version})=> (
     <div className={cx('Header__logo')}>
             <h2>
                 <span>Node.js</span>  
-                <span class="light">GDL</span> 
-                <span> Selenium </span> 
-                <span> JavaScript </span>  
-                <span> TypeScript</span>
+                <span className={cx("light")}>GDL</span> 
+                <span>Selenium</span> 
+                <span>JavaScript</span>  
+                <span>TypeScript</span>
             </h2>
         <span className={cx('Header__version')}>
                 {version}
@@ -30,11 +30,8 @@ const BlogHeader = ({version})=> (
                     </path>
                 </svg>    
             </div>
-            
             <Button>Sign in</Button>
         </div>
-          
-          
     </div>
 </header>
 );
