@@ -16,6 +16,8 @@ class NavItem extends Component {
         moveto:PropTypes.string.isRequired        
     }
 
+
+    // optimization Test State 
     state = {
         activate:false
     }
