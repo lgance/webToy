@@ -3,7 +3,7 @@ import PageTemplate from 'components/common/PageTemplate';
 import BoardListTemplate from 'components/common/BoardListTemplate';
 import queryString from 'query-string';
 
-const BoardPage = ({location,match}) =>{
+const BoardListPage = ({location,match}) =>{
     const query = queryString.parse(location.search);
     console.log(query);
     const category = match.params.category;
@@ -20,4 +20,4 @@ const BoardPage = ({location,match}) =>{
         )
 }
 
-export default BoardPage;
+export default BoardListPage;

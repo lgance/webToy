@@ -60,7 +60,7 @@ class NavItem extends Component {
 
     render() {
     const {children,moveto} = this.props;
-    const _originMoveto = moveto ==='home' ? '/' : "/board/"+moveto;
+    const _originMoveto = moveto ==='home' ? '/' : "/boardList/"+moveto;
         return (
             <li className={cx('Nav__item')}    >
                 <NavLink exact to ={_originMoveto}

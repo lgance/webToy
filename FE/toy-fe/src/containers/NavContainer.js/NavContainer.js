@@ -1,7 +1,12 @@
 import React ,{Component} from 'react';
+
 import classNames from 'classnames/bind';
 import style from './NavContainer.scss';
+
 import NavItem from 'components/NavItem';
+
+
+import { connect } from 'react-redux';
 
 const cx = classNames.bind(style);
 
@@ -19,11 +24,10 @@ const cx = classNames.bind(style);
 
 // 언마운트
 // componentWillUnmount
+
 class NavContainer extends Component {
-        state = {
-           gnb:[]
-        }
-// Props 가 변경 됐을시 또는 부모 리렌더링시 호출됨
+   
+    // Props 가 변경 됐을시 또는 부모 리렌더링시 호출됨
 // props를 변동된게 있으면 state에 동기화 하는 작업 
     static getDerivedStateFromProps(nextProps,prevState){
             // console.warn('getDerivedStateFromProps');
@@ -64,8 +68,10 @@ class NavContainer extends Component {
 // forceUpdate가 호출될시 무조건 렌더가 불리는데 별로 좋지 않음
     render() {
         
-        const { gnb } = this.props;
-               const itemArray = gnb.map((item,index)=>{
+        // blognavlist
+
+        const { blognavlist } = this.props;
+               const itemArray = blognavlist.map((item,index)=>{
                 return <NavItem moveto={item.id} 
                         key={index}
                         activate={item.activate}
@@ -73,7 +79,7 @@ class NavContainer extends Component {
                                 {item.text}
                         </NavItem>
                 }) ;
-        // console.log(gnb);
+        
 
         return (    
             <nav className={cx('Nav__wrap')} role="navigation">

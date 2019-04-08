@@ -1,7 +1,7 @@
 import React, {Component, Fragment } from 'react';
 import { Route , Switch} from 'react-router-dom';
 
-import { HomePage,BoardPage,NotFoundPage,EditorPage } from 'pages';
+import { HomePage,BoardListPage,NotFoundPage,EditorPage } from 'pages';
 
 
 
@@ -13,7 +13,7 @@ class App extends Component {
             <Switch>
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/board/editor" component={EditorPage}/>
-                <Route path="/board/:category" component={BoardPage}/>
+                <Route path="/boardList/:category" component={BoardListPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </Fragment>

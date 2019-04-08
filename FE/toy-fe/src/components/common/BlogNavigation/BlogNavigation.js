@@ -8,29 +8,9 @@ import NavContainer from 'containers/NavContainer.js'
 
 const cx = classNames.bind(style);
 
-const BlogNavigation = (
-    {gnb}
-    ) =>(
-        
+const BlogNavigation = () =>(
         <div className={cx('Global__menu')}>
-             <NavContainer gnb = {gnb}></NavContainer>
+             <NavContainer ></NavContainer>
         </div>
-        
 )
-
-
 export default BlogNavigation; 
-
-
-// class BlogNavigation extends Component {
-//     render() {
-//         return (
-//            <nav>
-//                <div className={cx('Global__menu')}>
-//                     <NavContainer gnb = {items}></NavContainer>
-//                </div>
-               
-//            </nav>
-//         );
-//     }
-// }
