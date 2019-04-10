@@ -5,7 +5,6 @@ import style from './NavContainer.scss';
 
 import NavItem from 'components/NavItem';
 
-
 import { connect } from 'react-redux';
 
 const cx = classNames.bind(style);
@@ -33,11 +32,13 @@ class NavContainer extends Component {
             // console.warn('getDerivedStateFromProps');
 
             // 메뉴 길이가 다르다면 state를 동기화 
-            if(nextProps.gnb.length !== prevState.gnb.length){
-                    return {
-                        gnb:nextProps.gnb
-                    }
-            }
+        console.log(nextProps);
+        console.warn(prevState);
+            // if(nextProps.blognavlist.length !== prevState.blognavlist.length){
+            //         return {
+            //             blognavlist:nextProps.blognavlist
+            //         }
+            // }
         return null;
         }
 // state가 변경됐을때 호출된다. return false시 리렌더링 취소 
@@ -47,7 +48,7 @@ class NavContainer extends Component {
             //     console.log(nextState);
 
         // return nextProps === nextState ? false : true;
-        if(nextProps.gnb.length !== nextState.gnb.length){
+        if(nextProps.blognavlist.length !== nextState.blognavlist.length){
                 return true;
         }
         // 무조건 렌더링을위해서 true로 변경 임시 
@@ -67,10 +68,8 @@ class NavContainer extends Component {
     }
 // forceUpdate가 호출될시 무조건 렌더가 불리는데 별로 좋지 않음
     render() {
-        
-        // blognavlist
-
         const { blognavlist } = this.props;
+        console.log("네비리스트" ,blognavlist);
                const itemArray = blognavlist.map((item,index)=>{
                 return <NavItem moveto={item.id} 
                         key={index}
@@ -78,9 +77,7 @@ class NavContainer extends Component {
                         >
                                 {item.text}
                         </NavItem>
-                }) ;
-        
-
+                });
         return (    
             <nav className={cx('Nav__wrap')} role="navigation">
                 <ul className={cx('Nav__unordered')} >
@@ -89,8 +86,13 @@ class NavContainer extends Component {
             </nav>
         );
     }
-    
 }
+
+function mapStateToProps(state){
+    return{ blognavlist:state.blognavlist }
+}
+
+export default connect(mapStateToProps)(NavContainer);
 
 
 // const NavContainer = ({
@@ -121,5 +123,5 @@ class NavContainer extends Component {
 // };
 
 
-export default NavContainer;
+// export default NavContainer;
 
