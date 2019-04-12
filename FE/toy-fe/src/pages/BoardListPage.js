@@ -7,8 +7,10 @@ const BoardListPage = ({location,match}) =>{
     const query = queryString.parse(location.search);
     console.log(query);
     const category = match.params.category;
-    const detail = query.detail === 'true';
-    const pageNumber = query.pageNumber;
+    // const detail = query.detail === 'true';
+    // const pageNumber = query.pageNumber;
+
+    console.warn(` ${category} 가 선택되었습니다. `);
 
 // 보드리스트 를 보여줌 
 

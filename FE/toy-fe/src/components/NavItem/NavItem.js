@@ -7,16 +7,23 @@ import className from 'classnames/bind';
 import PropTypes from 'prop-types';
 const cx = className.bind(styles);
 
-// 재렌더링 할필요 없는건 재렌더링 하지않음
+/**
+ * Redux를 붙이면서 getSDerivedStateFromProps라든지 등의 함수들이 전부 필요가 없어졌음
+ * 
+ * state가 불변한 상태로 되다보니 Link 태그의 active한 선택 상태는 react-route가 처리 해주며
+ * 
+ * state가 불변한 상태라 함은 최초실행시에 state만 변경되고 
+ * 그 이후로는 props를 다시 던져주니 않기 때문에 부모의 props가 변동되지않아 
+ * 하위의 Item 들도 재 렌더링 동작 조차 시작하지 않게 됨 
+ * 
+ * 아래의 코드들은 전부 의미가 없지만 테스트용으로 남김
+ * 
+ */
 class NavItem extends Component {
-
-
     static propTypes ={
         children:PropTypes.string.isRequired,
         moveto:PropTypes.string.isRequired        
     }
-
-
     // optimization Test State 
     state = {
         activate:false
@@ -34,7 +41,7 @@ class NavItem extends Component {
         return null;
     }
     shouldComponentUpdate(nextProps,nextState){
-       
+       console.log('test');
        if(nextState.activate === true){
             console.warn(nextProps);
             console.warn(nextState);
@@ -59,6 +66,7 @@ class NavItem extends Component {
     }
 
     render() {
+            
     const {children,moveto} = this.props;
     const _originMoveto = moveto ==='home' ? '/' : "/boardList/"+moveto;
         return (

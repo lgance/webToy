@@ -28,19 +28,19 @@ class NavContainer extends Component {
    
     // Props 가 변경 됐을시 또는 부모 리렌더링시 호출됨
 // props를 변동된게 있으면 state에 동기화 하는 작업 
-    static getDerivedStateFromProps(nextProps,prevState){
-            // console.warn('getDerivedStateFromProps');
 
+// -> Redux를 붙이면서 쓸모가 없어지기 때문에 제거 
+
+    // static getDerivedStateFromProps(nextProps,prevState){
             // 메뉴 길이가 다르다면 state를 동기화 
-        console.log(nextProps);
-        console.warn(prevState);
+      
             // if(nextProps.blognavlist.length !== prevState.blognavlist.length){
             //         return {
             //             blognavlist:nextProps.blognavlist
             //         }
             // }
-        return null;
-        }
+        // return null;
+        // }
 // state가 변경됐을때 호출된다. return false시 리렌더링 취소 
     shouldComponentUpdate(nextProps,nextState){
             // console.warn('shouldComponentUpdate');
@@ -48,9 +48,13 @@ class NavContainer extends Component {
             //     console.log(nextState);
 
         // return nextProps === nextState ? false : true;
-        if(nextProps.blognavlist.length !== nextState.blognavlist.length){
-                return true;
-        }
+
+        // if(nextProps.blognavlist.length !== nextState.blognavlist.length){
+        //         return true;
+        // }
+
+
+
         // 무조건 렌더링을위해서 true로 변경 임시 
         // return false;
         return true;
@@ -69,7 +73,6 @@ class NavContainer extends Component {
 // forceUpdate가 호출될시 무조건 렌더가 불리는데 별로 좋지 않음
     render() {
         const { blognavlist } = this.props;
-        console.log("네비리스트" ,blognavlist);
                const itemArray = blognavlist.map((item,index)=>{
                 return <NavItem moveto={item.id} 
                         key={index}
@@ -87,41 +90,7 @@ class NavContainer extends Component {
         );
     }
 }
-
-function mapStateToProps(state){
-    return{ blognavlist:state.blognavlist }
+function mapStateToProps({blognavigation}){
+    return{ blognavlist:blognavigation.blognavlist }
 }
-
 export default connect(mapStateToProps)(NavContainer);
-
-
-// const NavContainer = ({
-//         children,
-//         navItems,
-//         handlenavClick,
-//         ...rest
-// }) => {
-
-// {/* <NavContainer navItems={items} handleNavClick={handleNavClick} ></NavContainer> */}
-//         const itemArray = navItems.map((item,index)=>{
-//                 return <NavItem moveto={item.id} 
-//                         // navHandle={(e)=>handlenavClick(item.id,e)}
-//                         key={index}
-//                         activate={item.activate}
-//                         >
-//                                 {item.text}
-//                         </NavItem>
-//         }) 
- 
-//     return (
-//             <nav className={cx('Nav__wrap')}>
-//                 <ul className={cx('Nav__unordered')} >
-//                      {itemArray}
-//                 </ul>
-//             </nav>
-//     )
-// };
-
-
-// export default NavContainer;
-
