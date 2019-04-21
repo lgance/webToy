@@ -7,6 +7,11 @@ import NavItem from 'components/NavItem';
 
 import { connect } from 'react-redux';
 
+// import { bindActionCreators  } from 'redux';
+// import blognavigationActions from 'store/modules/blognavigation';
+
+
+import {changemenu} from 'store/modules/blognavigation'
 const cx = classNames.bind(style);
 
 // 클래스로 만들 필요는 없는데 확인 차 제작 
@@ -71,6 +76,12 @@ class NavContainer extends Component {
         return true;
     }
 // forceUpdate가 호출될시 무조건 렌더가 불리는데 별로 좋지 않음
+
+    handlemenuChange = (e) =>{
+        const{ handleChangeMenu } = this.props;
+        handleChangeMenu();
+    }
+
     render() {
         const { blognavlist } = this.props;
                const itemArray = blognavlist.map((item,index)=>{
@@ -83,14 +94,31 @@ class NavContainer extends Component {
                 });
         return (    
             <nav className={cx('Nav__wrap')} role="navigation">
-                <ul className={cx('Nav__unordered')} >
+                <ul className={cx('Nav__unordered')} onClick={this.handlemenuChange}>
                     {itemArray}
                 </ul>
             </nav>
         );
     }
 }
-function mapStateToProps({blognavigation}){
-    return{ blognavlist:blognavigation.blognavlist }
-}
-export default connect(mapStateToProps)(NavContainer);
+
+// const mapDispatchToProps = dispatch=>{
+//     return {
+//         handleChangeMenu : () => dispatch(changemenu) 
+//     }
+// }
+export default connect(
+    ({blognavigation}) =>({
+        blognavlist:blognavigation.blognavlist
+    }),
+    (dispatch) =>({
+        handleChangeMenu:()=> dispatch(changemenu())
+    })
+    // mapDispatchToProps
+)(NavContainer);
+
+   // (dispatch) =>({
+    //     changemenu: () =>dispatch(blognavigationActions.changemenu())
+    // })
+
+            // navActions : bindActionCreators(blognavigationActions,dispatch)

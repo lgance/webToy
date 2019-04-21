@@ -10,7 +10,7 @@ const BoardListPage = ({location,match}) =>{
     // const detail = query.detail === 'true';
     // const pageNumber = query.pageNumber;
 
-    console.warn(` ${category} 가 선택되었습니다. `);
+    // console.warn(` ${category} 가 선택되었습니다. `);
 
 // 보드리스트 를 보여줌 
 

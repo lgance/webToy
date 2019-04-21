@@ -1,11 +1,12 @@
 import { combineReducers  } from 'redux';
 import noticeList from './noticeList';
 import blognavigation from './blognavigation';
-
+import categoryList from './categoryList';
 
 export default combineReducers({
     noticeList,
-    blognavigation
+    blognavigation,
+    categoryList
 });
 
 

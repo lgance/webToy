@@ -12,7 +12,7 @@ class App extends Component {
             <Fragment>
             <Switch>
                 <Route exact path="/" component={HomePage}/>
-                <Route exact path="/board/editor" component={EditorPage}/>
+                <Route exact path="/boardList/editor" component={EditorPage}/>
                 <Route path="/boardList/:category" component={BoardListPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>

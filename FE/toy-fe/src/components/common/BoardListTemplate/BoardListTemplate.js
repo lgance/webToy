@@ -1,57 +1,10 @@
 import React from 'react';
-import styles from './BoardListTemplate.scss';
-import classNames from 'classnames/bind';
-
-
-const cx = classNames.bind(styles);
-
-
-const PaginationComponent = () =>{
-
-    const isLoading = true;
-
-    // child가 5일때
-    const tempList = 5;
-    const maxPage = 3;
-    const pageItem = new Array(tempList%maxPage).fill(0).map((v,i)=>{
-            if(i===0){
-                return (<button key={i} className={cx('current')}>{i+1}</button>)
-            }
-            return <button key={i}>{i+1}</button>
-    })
-    // console.log(pageItem);
-    return(
-        <div className={cx('Pagination__wrapper')}>
-                <button disabled>처음</button>
-                <button>이전</button>
-                {isLoading && pageItem}
-                <button>다음</button>
-                <button>끝</button>
-        </div>
-    )
-}
-
-
+import BoardListContainer from 'containers/BoardListContainer';
 const BoardListTemplate = ({
-    noticeList,
     category
 }) =>{
     return (
-        <section className={cx('BoardListTemplate')}>
-                <div className={cx('Pagination__area')}>
-                     <PaginationComponent></PaginationComponent>
-                </div>
-                <div className={cx('Notice__List')}>
-                    {noticeList}
-                </div>
-                <div className={cx('Category__List')}>
-                    {category}
-
-                </div>
-                <div className={cx('Pagination__area')}>
-                    <PaginationComponent></PaginationComponent>
-                </div>
-        </section>
+        <BoardListContainer category={category}></BoardListContainer>
     )
 }
 export default BoardListTemplate; 

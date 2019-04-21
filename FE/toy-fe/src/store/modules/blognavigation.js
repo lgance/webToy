@@ -2,10 +2,11 @@
 
 const ADDMENU = 'blognavigation/ADDMENU';
 const DELETEMENU = 'blognavigation/DELETEMENU';
+const CHANGEMENU = 'blognavigation/CHANGEMENU';
 
 export const addmenu = menu => ({type:ADDMENU,text:menu});
 export const deletemenu = () =>({type:DELETEMENU});
-
+export const changemenu = () =>({type:CHANGEMENU});
 
 const initialState = {
     blognavlist:[
@@ -30,6 +31,10 @@ export default function blognavigation(state = initialState,action){
                 return {
                     ...state,
                     blognavlist:[]        
+                };
+            case CHANGEMENU:
+                return {
+                    ...state
                 };
             default:
                 return state;
