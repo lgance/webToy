@@ -32,10 +32,11 @@ export default function blognavigation(state = initialState,action){
                     ...state,
                     blognavlist:[]        
                 };
-            case CHANGEMENU:
-                return {
-                    ...state
-                };
+            // case CHANGEMENU:  이후에 기능 추가 및 설정 
+            //     return {
+            //         ...state,
+                 
+            //     }; 아직 동작 X
             default:
                 return state;
         }

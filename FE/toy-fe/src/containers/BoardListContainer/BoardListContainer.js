@@ -52,10 +52,15 @@ class BoardListContainer extends Component{
             <div className={cx('Pagination__area')}>
                 <PaginationComponent></PaginationComponent>
            </div>
-           <div className={cx('Notice__List')}>
+           
+           <div className={cx('Notice__list')}>
                {nostItemArray}
            </div>
-           <div className={cx('Category__List')}>
+
+           <div className={cx('Category__total')}>
+                [Categroy] [ToTal] 개의 글 
+           </div>
+           <div className={cx('Category__list')}>
                {categoryItemArray}
                {category}
            </div>

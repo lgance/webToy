@@ -66,7 +66,7 @@ class NavItem extends Component {
     }
 
     render() {
-    // console.warn(`Rendering NavItem  [props] ${this.props.children}`);
+    console.warn(`Rendering NavItem  [props] ${this.props.children}`);
     const {children,moveto} = this.props;
     const _originMoveto = moveto ==='home' ? '/' : "/boardList/"+moveto;
         return (
