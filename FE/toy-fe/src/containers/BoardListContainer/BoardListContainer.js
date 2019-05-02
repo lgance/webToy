@@ -2,6 +2,7 @@ import React ,{Component} from 'react';
 import styles from './BoardListContainer.scss';
 import classNames from 'classnames/bind';
 
+import BoardListItem from 'components/BoardListItem';
 
 
 import { connect } from 'react-redux';
@@ -36,16 +37,16 @@ class BoardListContainer extends Component{
 
     render () {
         const { noticeList, categoryList,category} = this.props;
-        console.warn('ListContainer Category ',category);
+                console.warn('ListContainer Category ',category);
         const nostItemArray = noticeList.map((item,index) =>{
                 return <div key={index}>
                     {item.title}
                 </div>
         });
         const categoryItemArray = categoryList.map((item,index)=>{
-                return <div key={index}>
-                        {item.title}
-                </div>
+                return <BoardListItem key={index}>
+                                    {item.title}
+                       </BoardListItem>
         });
         return (
             <section className={cx('BoardListContainer')}>
