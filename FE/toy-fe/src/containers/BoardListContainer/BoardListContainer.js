@@ -49,26 +49,28 @@ class BoardListContainer extends Component{
                        </BoardListItem>
         });
         return (
-            <section className={cx('BoardListContainer')}>
+            <article className={cx('BoardListContainer')}>
             <div className={cx('Pagination__area')}>
                 <PaginationComponent></PaginationComponent>
            </div>
            
-           <div className={cx('Notice__list')}>
+           <section className={cx('Notice__list')}>
                {nostItemArray}
-           </div>
+           </section>
 
-           <div className={cx('Category__total')}>
-                [Categroy] [ToTal] 개의 글 
-           </div>
-           <div className={cx('Category__list')}>
+            <section className={cx('Category__total')}>
+                [{category}] [ToTal] 개의 글 
+            </section>
+
+           <section className={cx('Category__list')}>
                {categoryItemArray}
-               {category}
-           </div>
+           </section>
+
            <div className={cx('Pagination__area')}>
                <PaginationComponent></PaginationComponent>
            </div>
-             </section>
+
+             </article>
         )
     }
 }
