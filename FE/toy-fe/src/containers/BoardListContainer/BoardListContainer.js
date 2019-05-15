@@ -33,6 +33,7 @@ const PaginationComponent = () =>{
         </div>
     )
 }
+
 class BoardListContainer extends Component{
 
     render () {
