@@ -1,0 +1,10 @@
+@import '../PageTemplate/PageTemplate.scss';
+
+nav{
+    display:block;
+    min-height:$navMinHeight;
+    height:$navHeight;
+    // overflow:hidden;
+}
+
+

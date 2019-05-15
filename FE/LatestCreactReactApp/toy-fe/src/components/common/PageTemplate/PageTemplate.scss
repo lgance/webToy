@@ -1,0 +1,67 @@
+
+
+$headerHeight : 65px;
+$navHeight : 40px;
+$navMinHeight : 40px;
+$footerHeight : 35px;
+// 10rem;
+
+$mainHeight : $headerHeight + $navHeight+$footerHeight + 5px;
+$mainMobileHeight : $mainHeight - 35px;
+
+// header 65 
+// nav 40
+// main 은 나머지 영역 
+// footer 35
+
+
+.Page__template{
+    max-width:calc(1050px);
+    height:100%;
+    margin:0 auto;
+    padding:5px;
+    background-color:#FFFFFF;
+
+    overflow:hidden;
+    main{
+        display:inline-block;
+        // min-width:480px;
+        width:100%;
+        line-height:20px;
+        margin-bottom:5px;
+        height:calc(100% - #{$mainHeight});
+        font-size:16px;
+        overflow-y:auto;
+        overflow-x:auto;
+    }
+    main label{
+        // display:inline-block;
+        // vertical-align:2px
+        line-height:inherit;
+        word-break:break-all;
+        white-space:wrap;
+    }
+
+}
+
+
+
+
+
+// tablet
+@media (max-width:800px){
+      
+}
+// mobile
+@media (max-width:480px){
+    .Page__template{
+        main{
+            height:calc(100% - #{$mainMobileHeight});
+        }
+
+        .Footer{
+            display:none;
+        }
+    }
+
+}

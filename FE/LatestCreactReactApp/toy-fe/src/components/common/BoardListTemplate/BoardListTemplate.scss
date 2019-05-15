@@ -1,0 +1,46 @@
+.BoardListTemplate {
+  padding: 0px calc(0.5rem) calc(0.5rem);
+
+  .Notice__List {
+    display: block;
+    background-color: chartreuse;
+    min-height: 20px;
+  }
+
+  .Category__List {
+    background-color: aquamarine;
+    min-height: 20px;
+  }
+
+  .Pagination__wrapper {
+    text-align: center;
+    margin: 0 -0.5rem;
+
+    button {
+      cursor: pointer;
+      min-width: calc(1rem);
+      height: calc(2rem);
+      width: 35px;
+      line-height: 28px;
+      border-color: lightgrey;
+      padding: 0px;
+
+      border-style: solid;
+      border-image: initial;
+      border-radius: calc(1rem);
+      background-color: #ffffff;
+      outline: none;
+      vertical-align: top;
+    }
+    .current {
+      cursor: default;
+      background-color: #2e1e11;
+      color: #ffffff;
+    }
+
+    button[disabled] {
+      cursor: not-allowed;
+      color: silver;
+    }
+  }
+}

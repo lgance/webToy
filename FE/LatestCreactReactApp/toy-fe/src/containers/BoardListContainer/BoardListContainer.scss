@@ -1,0 +1,52 @@
+.BoardListContainer {
+  padding: 0px calc(0.5rem) calc(0.5rem);
+  .Notice__list {
+    display: block;
+    background-color: chartreuse;
+    min-height: 20px;
+  }
+
+  // 카테고리 상단
+  .Category__total {
+    margin: 10px 0px;
+    padding: 0px 0px 0px 15px;
+    min-height: 20px;
+  }
+
+  .Category__list {
+    // background-color: aquamarine;
+    min-height: 20px;
+  }
+
+  .Pagination__wrapper {
+    text-align: center;
+    margin: 0 -0.5rem;
+
+    button {
+      cursor: pointer;
+      min-width: calc(1rem);
+      height: calc(2rem);
+      width: 35px;
+      line-height: 28px;
+      border-color: lightgrey;
+      padding: 0px;
+
+      border-style: solid;
+      border-image: initial;
+      border-radius: calc(1rem);
+      background-color: #ffffff;
+      outline: none;
+      vertical-align: top;
+    }
+    .current {
+      cursor: default;
+      background-color: #2e1e11;
+      color: #ffffff;
+    }
+
+    button[disabled] {
+      cursor: not-allowed;
+      color: silver;
+    }
+  }
+}
