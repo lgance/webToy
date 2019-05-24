@@ -36,8 +36,17 @@ const PaginationComponent = () =>{
 
 class BoardListContainer extends Component{
 
+
+    handleCategoryList(e){
+        console.log(e.target);
+        
+    }
+
     render () {
-        const { noticeList, categoryList,category} = this.props;
+        const { noticeList, categoryList, category} = this.props;
+
+        const { handleCategoryList } = this;
+
                 console.warn('ListContainer Category ',category);
         const nostItemArray = noticeList.map((item,index) =>{
                 return <div key={index}>
@@ -63,7 +72,7 @@ class BoardListContainer extends Component{
                 [{category}] [ToTal] 개의 글 
             </section>
 
-           <section className={cx('Category__list')}>
+           <section className={cx('Category__list')} onClick={handleCategoryList}>
                {categoryItemArray}
            </section>
 
